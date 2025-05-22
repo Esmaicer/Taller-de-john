@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var bus_1 = require("./bus");
+var pasajero_1 = require("./pasajero");
+var conductor_1 = require("./conductor");
+var viaje_1 = require("./viaje");
+var ruta_1 = require("./ruta");
+var camion = new bus_1.Bus("ABC-1234", 10, "HONDA");
+var hernan = new conductor_1.Conductor(5, "femenino", 1234567890, camion);
+var josh = new pasajero_1.Pasajero("José", 987654321, "jose@gmail.com", hernan);
+var excursion = new viaje_1.Viaje(20, 10, josh);
+var manta_cuenca = new ruta_1.Ruta("Quito", "Guayaquil", 900, excursion);
+manta_cuenca.mostrartodainfo();
